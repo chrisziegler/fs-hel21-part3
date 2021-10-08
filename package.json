@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "build-ui": "rm -rf build && cd ../fs-hel21-sup/part2/notes && npm run build --prod && cp -r build ../../../fs-hel21-part3-notes",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
