@@ -29,9 +29,10 @@ let notes = [
 ]
 
 // The Root Route
-app.get('/', (request, response) => {
-  response.send('<h1>Hello World!</h1>')
-})
+// Replaced by app.use(express.static('build'))
+// app.get('/', (request, response) => {
+//   response.send('<h1>Hello World!</h1>')
+// })
 
 // The Index Route
 app.get('/api/notes', (request, response) => {
