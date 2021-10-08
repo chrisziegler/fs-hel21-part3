@@ -5,11 +5,6 @@ const cors = require('cors')
 app.use(cors())
 app.use(express.json())
 
-// const app = http.createServer((req, res) => {
-//   res.writeHead(200, { 'Content-Type': 'text/plain' })
-//   res.end('Hello from server')
-// })
-
 let notes = [
   {
     id: 1,
@@ -31,10 +26,6 @@ let notes = [
     important: true,
   },
 ]
-// const app = http.createServer((request, response) => {
-//   response.writeHead(200, { 'Content-Type': 'application/json' })
-//   response.end(JSON.stringify(notes))
-// })
 
 // The Root Route
 app.get('/', (request, response) => {
