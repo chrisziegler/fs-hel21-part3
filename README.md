@@ -1,5 +1,9 @@
 # Fullstack Helsinki 2021 Part 3 Note App Separate Repo for Heroku
 
+### *This repo for the finalized version of the Note App along with the main fs-hel21-sup Repo are supplemental course work, and are not to be submitted as for-credit exercises.*
+
+----
+
 Location of Notes App: https://whispering-spire-37046.herokuapp.com/
 
 Location of JSON API Server: https://whispering-spire-37046.herokuapp.com/api/notes
