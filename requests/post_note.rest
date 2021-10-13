@@ -2,6 +2,6 @@ POST http://localhost:3001/api/notes
 Content-Type: application/json
 
 {
-  "content": "Dont forget to set Content Type",
-  "important": false
+  "content": "Test removing the noteSchema.set('toJSON') method",
+  "important": true
 }

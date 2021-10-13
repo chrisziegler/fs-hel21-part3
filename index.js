@@ -44,7 +44,7 @@ app.get('/api/notes/:id', (request, response, next) => {
 // }
 
 // The Post Route
-app.post('/api/notes', (request, response) => {
+app.post('/api/notes', (request, response, next) => {
   const { body } = request
   request.info = body
 
@@ -60,9 +60,12 @@ app.post('/api/notes', (request, response) => {
     date: new Date(),
   })
 
-  note.save().then(savedNote => {
-    response.json(savedNote)
-  })
+  note
+    .save()
+    .then(savedNote => {
+      response.json(savedNote)
+    })
+    .catch(error => next(error))
 })
 
 // Update Route
@@ -84,7 +87,7 @@ app.put('/api/notes/:id', (request, response, next) => {
 // Delete Route
 app.delete('/api/notes/:id', (request, response, next) => {
   Note.findByIdAndRemove(request.params.id)
-    .then(result => {
+    .then(() => {
       response.status(204).end()
     })
     .catch(error => next(error))
@@ -101,6 +104,10 @@ const errorHandler = (error, request, response, next) => {
 
   if (error.name === 'CastError') {
     return response.status(400).send({ error: 'malformatted id' })
+  }
+
+  if (error.name === 'ValidationError') {
+    return response.status(400).json({ error: error.message })
   }
 
   next(error)
