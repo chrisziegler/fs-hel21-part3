@@ -8,7 +8,7 @@
     "lint": "eslint .",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build-ui": "rm -rf build && cd ../fs-hel21-sup/part2/notes && npm run build --prod && cp -r build ../../../fs-hel21-part3-notes",
+    "build:ui": "rm -rf build && cd ../fs-hel21-sup/part2/notes && npm run build --prod && cp -r build ../../../fs-hel21-part3-notes",
     "deploy:full": "npm run build:ui && git commit -m uibuild && git push && npm run deploy",
     "logs:prod": "heroku logs --tail"
   },
