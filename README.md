@@ -4,6 +4,8 @@
 
 ----
 
+Exercises for part4 notes including unit testing the backend included with this repo.
+
 Location of Notes App: https://whispering-spire-37046.herokuapp.com/
 
 Location of JSON API Server: https://whispering-spire-37046.herokuapp.com/api/notes
